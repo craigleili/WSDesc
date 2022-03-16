@@ -1,0 +1,58 @@
+ckpt: ''
+
+conv3d.desc_dim: 32
+conv3d.dropout: false
+conv3d.dropout_prob: 0.3
+conv3d.fusion: max_pool
+conv3d.in_channels: 1
+conv3d.type: conv3d
+conv3d.weight_normalize: false
+
+data.batch_size: 1
+data.category: null
+data.gaussian_noise: false
+data.num_points: 1024
+data.num_points_per_sample: 128
+data.num_samples: 128
+data.num_subsampled_points: 768
+data.num_workers: 4
+data.root: exp/modelnet40_data
+data.rot_factor: 4
+data.sample_radius: 0.3
+data.test.dist_thresh: 0.05
+data.test.iterations: 3
+data.train.epochs: 2
+data.type: modelnet40
+data.unseen: false
+data.valid.epoch_step: 1
+
+git: ''
+gpus:
+- 0
+log_dir: exp/modelnet40
+
+loss.criterion_type: l1
+loss.cycle_weight: 1.0
+loss.inlier_threshold: 0.1
+loss.max_thresh: 10
+loss.ortho_weight: 1.0
+
+model_name: diff_voxel
+note: ''
+
+optim.decay_step: 1
+optim.grad_clip: 0.5
+optim.lr: 0.001
+optim.lr_decay: 0.1
+optim.type: adam
+optim.weight_decay: 0.0
+
+progressbar_step: 10
+seed: 9
+
+transformer.max_scale: 5.0
+transformer.min_scale: 1.0
+
+voxelization.edge_length: 0.15
+voxelization.resolution: 16
+voxelization.sigma: 0.001
